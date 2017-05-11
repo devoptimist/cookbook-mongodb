@@ -53,11 +53,12 @@ None
 
 Testing
 -------
+```shell
 foodcritic .
 cookstyle .
 rspec
 kitchen test
-
+```
 Out of scope (todo)
 ----------------
 Firewall rules are not handled just assumed to be disabled
