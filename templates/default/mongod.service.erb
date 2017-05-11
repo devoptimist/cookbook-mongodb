@@ -1,0 +1,19 @@
+[Unit]
+Description=MongoDB Database Service
+Wants=network.target
+After=network.target
+
+[Service]
+Type=forking
+PIDFile=<%= @mongod_pid_file %>
+ExecStart=<%= @mongod_bin %> --config <%= @mongod_conf %>
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=always
+User=<%= @mongod_user %>
+Group=<%= @mongod_group %>
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target
+

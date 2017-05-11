@@ -1,0 +1,12 @@
+name 'mongodb'
+maintainer 'devoptamist'
+maintainer_email 'stephenb583@gmail.com'
+license 'All Rights Reserved'
+description 'Installs/Configures mongodb'
+long_description 'Installs/Configures mongodb'
+version '0.1.0'
+chef_version '>= 12.19.36' if respond_to?(:chef_version)
+supports 'ubuntu', '>= 16.04'
+supports 'centos', '>= 7'
+issues_url 'https://github.com/chef-cookbooks/chef-client/issues'
+source_url 'https://github.com/chef-cookbooks/chef-client'

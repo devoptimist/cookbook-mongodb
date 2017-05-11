@@ -1,0 +1,42 @@
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+  deprecations_as_errors: true
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: centos-7.3
+  - name: ubuntu-16.04
+    driver_config:
+      box: bento/ubuntu-16.04
+
+suites:
+  - name: default
+    run_list:
+      - recipe[mongodb::default]
+    verifier:
+      inspec_tests:
+        - test/smoke/default
+    attributes:
+      mongodb:
+        instances:
+          testdb1:
+            state: create
+  - name: multi
+    run_list:
+      - recipe[mongodb::default]
+    verifier:
+      inspec_tests:
+        - test/smoke/multi
+    attributes:
+      mongodb:
+        instances:
+          testdb1:
+            state: create
+          testdb2:
+            state: create
+            port: '24017'
