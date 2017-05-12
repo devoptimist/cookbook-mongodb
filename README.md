@@ -61,12 +61,13 @@ kitchen test
 ```
 Out of scope (todo)
 ----------------
-Firewall rules are not handled just assumed to be disabled
-SELinux assumed to be permisive
-Clustering/sharding not implimented
-User management not implimented
-more indepth inspec and chefspec
-Rakefile for tests
+ * The version of mogodb is hardcoded to 3.4 this should be a variable
+ * Firewall rules are not handled just assumed to be disabled
+ * SELinux assumed to be permisive
+ * Clustering/sharding not implimented
+ * User management not implimented
+ * More indepth inspec and chefspec
+ * Rakefile for tests
 
 License
 -------
