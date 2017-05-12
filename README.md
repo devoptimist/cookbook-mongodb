@@ -64,8 +64,8 @@ Out of scope (todo)
  * The version of mogodb is hardcoded to 3.4 this should be a variable
  * Firewall rules are not handled just assumed to be disabled
  * SELinux assumed to be permisive
- * Clustering/sharding not implimented
- * User management not implimented
+ * Clustering/sharding not implemented
+ * User management not implemented
  * More indepth inspec and chefspec
  * Rakefile for tests
 
